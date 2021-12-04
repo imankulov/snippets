@@ -1,4 +1,7 @@
-# Sample docker-compose file to run a PostgreSQL server
+# Sample docker-compose file to run a PostgreSQL server.
+#
+# The storage can be cleaned up by running the command:
+# docker-compose down -v
 version: "3.2"
 
 services:

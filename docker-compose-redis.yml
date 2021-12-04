@@ -1,0 +1,17 @@
+# Sample docker-compose file to run a Redis server
+# store data in a persistent storage.
+#
+# The storage can be cleaned up by running the command:
+# docker-compose down -v
+version: "3.2"
+
+services:
+  redis:
+    image: redis:alpine
+    ports:
+      - "127.0.0.1:6399:6379"
+    volumes:
+      - redis-data:/data
+
+volumes:
+  redis-data: {}
