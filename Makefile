@@ -15,7 +15,7 @@ help:
 .PHONY: help Makefile dash
 
 dash: html
-	doc2dash -n roman -A _build/html
+	doc2dash -f -n  roman -A _build/html
 
 # Catch-all target: route all unknown targets to Sphinx using the new
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
