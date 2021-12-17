@@ -14,6 +14,9 @@ help:
 
 .PHONY: help Makefile dash
 
+serve:
+	python -m http.server --bind 127.0.0.1 --directory _build/html 6001
+
 dash: html
 	doc2dash -f -n  roman -A _build/html
 
