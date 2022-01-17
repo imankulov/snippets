@@ -1,5 +1,39 @@
-Docker compose snippets
+Docker and docker-compose
+#########################
+
+Docker commands
+===============
+
+
+Reclaim disk space
+------------------
+
+Clean up disk space by removing all the docker containers older than 14 days.
+
+
+.. code-block:: bash
+
+   docker image prune -a --filter "until=336h"
+
+
+See `Prune unused Docker objects <https://docs.docker.com/config/pruning/>`_
+
+
+Run a container and attach current directory
+---------------------------------------------
+
+Example for a specific version of Python.
+
+.. code-block:: bash
+
+   docker run -v $(pwd):/app  --rm -it python:3.10  bash
+
+
+Docker-compose Snippets
 =======================
+
+
+
 
 PostgreSQL
 ----------

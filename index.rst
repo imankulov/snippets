@@ -5,7 +5,7 @@ Snippets
    :maxdepth: 2
    :caption: Contents:
 
-   docker-compose.rst
+   docker.rst
    oneliners.rst
    poetry.rst
    pre-commit.rst
