@@ -98,3 +98,31 @@ Sample docker-compose file to run a Redis server.
 
     volumes:
       redis-data: {}
+
+
+Keycloak
+--------
+
+Keycloak with the standalone database.
+
+
+.. code-block:: yaml
+
+    version: "3.2"
+
+    services:
+      keycloak:
+        image: quay.io/keycloak/keycloak:latest
+        ports:
+          - "127.0.0.1:8080:8080"
+        volumes:
+          - keycloak-data:/opt/jboss/keycloak/standalone/data/
+        environment:
+          KEYCLOAK_USER: admin
+          KEYCLOAK_PASSWORD: password
+
+    volumes:
+      keycloak-data: {}
+
+
+See `Get started with Keycloak on Docker <https://www.keycloak.org/getting-started/getting-started-docker>`_.
