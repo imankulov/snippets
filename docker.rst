@@ -1,6 +1,11 @@
 Docker and docker-compose
 #########################
 
+Helpful services
+================
+
+- `composerize: convert docker run to docker-compose <https://www.composerize.com/>`_
+
 Docker commands
 ===============
 
@@ -47,7 +52,7 @@ Sample docker-compose file to run a PostgreSQL server.
     #
     # Django-environ settings:
     # DATABASE_URL=psql://myproject:password@127.0.0.1:5483/myproject
-    version: "3.2"
+    version: "3.3"
 
     services:
       db:
@@ -86,7 +91,7 @@ Sample docker-compose file to run a Redis server.
     #
     # REDIS_URL = "redis://localhost:6399"
     # redis = Redis.from_url(REDIS_URL)
-    version: "3.2"
+    version: "3.3"
 
     services:
       redis:
@@ -108,7 +113,7 @@ Keycloak with the standalone database.
 
 .. code-block:: yaml
 
-    version: "3.2"
+    version: "3.3"
 
     services:
       keycloak:
@@ -126,3 +131,70 @@ Keycloak with the standalone database.
 
 
 See `Get started with Keycloak on Docker <https://www.keycloak.org/getting-started/getting-started-docker>`_.
+
+Fake email with Inbucket
+------------------------
+
+With `Inbucket <https://www.inbucket.org/>`_.
+
+.. code-block:: yaml
+
+    version: "3.3"
+    services:
+
+      # SMTP server is available at localhost:2500 or inbucket:2500.
+      # The web UI is available at http://localhost:9000.
+      # POP3 interface is at localhost:1100
+      inbucket:
+        image: inbucket/inbucket
+        ports:
+          - "9000:9000"
+          - "2500:2500"
+          - "1100:1100"
+
+
+
+Configuration with `django-environ <https://django-environ.readthedocs.io/en/latest/tips.html#email-settings>`__.
+
+
+.. code-block:: python
+
+    EMAIL_CONFIG = env.email("EMAIL_URL", default="smtp://localhost:2500")
+    vars().update(EMAIL_CONFIG)
+
+
+Fake email with MailHog
+-----------------------
+
+With `MailHog <https://github.com/mailhog/MailHog>`_.
+
+
+.. code-block:: yaml
+
+    version: "3.3"
+    services:
+
+      # SMTP server is available at localhost:1025 or mailhog:1025.
+      # The web UI is available at http://localhost:8025.
+      mailhog:
+        image: mailhog/mailhog
+        ports:
+          - "1025:1025"
+          - "8025:8025"
+
+
+Configuration with `django-environ <https://django-environ.readthedocs.io/en/latest/tips.html#email-settings>`__.
+
+
+.. code-block:: python
+
+    EMAIL_CONFIG = env.email("EMAIL_URL", default="smtp://localhost:1025")
+    vars().update(EMAIL_CONFIG)
+
+
+Sending an email from Django to see if it works:
+
+.. code-block:: python
+
+    from django.core.mail import send_mail
+    send_mail("subject", "message", "noreply@example.com", ["admin@example.com"])
