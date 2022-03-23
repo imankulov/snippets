@@ -10,6 +10,7 @@ Snippets
    poetry.rst
    pre-commit.rst
    tmuxinator.rst
+   node.rst
 
 
 Indices and tables
