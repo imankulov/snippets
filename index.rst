@@ -11,6 +11,7 @@ Snippets
    pre-commit.rst
    tmuxinator.rst
    node.rst
+   aws.rst
 
 
 Indices and tables

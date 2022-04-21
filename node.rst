@@ -23,7 +23,7 @@ Use Node 16.x (aka Gallium) in a project.
 
 See `Node codenames <https://github.com/nodejs/Release/blob/main/CODENAMES.md>`_
 
-Pinning verisons
+Pinning versions
 ----------------
 
 You can pin Node and NPM to a specific version.
