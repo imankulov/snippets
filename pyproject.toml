@@ -6,7 +6,7 @@ authors = ["Roman Imankulov <roman.imankulov@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "~3.10"
-doc2dash = "^2.4.0"
+doc2dash = "^2.4.1"
 Sphinx = "^4.3.1"
 
 [tool.poetry.dev-dependencies]

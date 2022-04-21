@@ -86,7 +86,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
 [[package]]
 name = "doc2dash"
-version = "2.4.0"
+version = "2.4.1"
 description = "Convert docs to the docset format."
 category = "main"
 optional = false
@@ -340,7 +340,7 @@ socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "~3.10"
-content-hash = "463d7e6fe473d73221780a7040116504a994431ee57528364cdd46d18323035a"
+content-hash = "b454b61265c0d27f3465bbb9feddb87128b12390b15e85c23acde48a3dd889d1"
 
 [metadata.files]
 alabaster = [
@@ -375,8 +375,8 @@ colorama = [
     {file = "colorama-0.4.4-py2.py3-none-any.whl", hash = "sha256:9f47eda37229f68eee03b24b9748937c7dc3868f906e8ba69fbcbdd3bc5dc3e2"},
 ]
 doc2dash = [
-    {file = "doc2dash-2.4.0-py2.py3-none-any.whl", hash = "sha256:5ebc1431a66dc7c381a030ceea79327a25612a7f75650254bdbb64c00a97acd0"},
-    {file = "doc2dash-2.4.0.tar.gz", hash = "sha256:a6a4a0a02bc80e87ef20935baf901c933a3ae0d085cfcff076ebaecccfcda7cf"},
+    {file = "doc2dash-2.4.1-py2.py3-none-any.whl", hash = "sha256:4b5f0de85882685a99f7ce03d85ddec2bb91c3c04c86519b90df8d0ea19aac32"},
+    {file = "doc2dash-2.4.1.tar.gz", hash = "sha256:96e748e81b9eb819e6b9dc58c07e0e7b815b5057277814cb8fbce116563be265"},
 ]
 docutils = [
     {file = "docutils-0.17.1-py2.py3-none-any.whl", hash = "sha256:cf316c8370a737a022b72b56874f6602acf974a37a9fba42ec2876387549fc61"},
