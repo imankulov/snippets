@@ -13,7 +13,7 @@ Snippets
    node.rst
    aws.rst
    pydantic.rst
-
+   python-project.rst
 
 
 Indices and tables
