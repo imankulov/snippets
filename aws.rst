@@ -1,6 +1,12 @@
 AWS Tips
 ========
 
+The best region
+---------------
+
+Use ``us-east-2`` aka US East (Ohio).
+
+
 Set up personal AWS profile to use
 -----------------------------------
 
