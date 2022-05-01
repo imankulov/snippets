@@ -12,6 +12,8 @@ Snippets
    tmuxinator.rst
    node.rst
    aws.rst
+   pydantic.rst
+
 
 
 Indices and tables
