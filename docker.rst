@@ -51,7 +51,7 @@ Sample docker-compose file to run a PostgreSQL server.
     # docker-compose down -v
     #
     # Django-environ settings:
-    # DATABASE_URL=psql://myproject:password@127.0.0.1:5483/myproject
+    # DATABASE_URL=psql://myproject:password@127.0.0.1:5499/myproject
     version: "3.3"
 
     services:
